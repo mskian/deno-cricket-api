@@ -1,6 +1,7 @@
 {
   "tasks": {
     "dev": "denon run --allow-net --allow-read server.ts",
-    "start": "deno run --allow-net --allow-read server.ts"
+    "start": "deno run --allow-net --allow-read server.ts",
+    "random": "deno run --allow-net --allow-read ./data/randomagent.ts"
   }
 }

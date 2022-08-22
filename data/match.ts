@@ -1,4 +1,5 @@
 import { cheerio } from "https://deno.land/x/denocheerio@1.0.0/mod.ts";
+import { getAgent } from "./randomagent.ts";
 
 type scoreData = {
   title: string;
@@ -37,6 +38,11 @@ type scoreData = {
 export async function dailyMatch(matchId: any) {
   return await fetch(
     `https://m.cricbuzz.com/live-cricket-scores/${matchId}/`,
+    {
+      headers: new Headers({
+        "User-agent": getAgent(),
+      }),
+    },
   )
     .then((result) => result.text())
     .then((html) => {

@@ -1,15 +1,25 @@
 # Deno Cricket API
 
 [![Test Lint](https://github.com/mskian/deno-cricket-api/actions/workflows/test.yml/badge.svg)](https://github.com/mskian/deno-cricket-api/actions/workflows/test.yml)
+[![Create Release](https://github.com/mskian/deno-cricket-api/actions/workflows/release.yml/badge.svg)](https://github.com/mskian/deno-cricket-api/actions/workflows/release.yml)
 ![Deno](https://img.shields.io/badge/Deno-464647?style=for-the-badge&logo=deno&logoColor=white)
 
-Live Cricket Score JSON API - Build using Deno 🦕  
+Live Cricket Score JSON API - Build using Deno 🦕
 
 ## Prerequisites
 
 - Deno on your System <https://deno.land/#installation>
 - Denon for Development Server and Live Changes -
   <https://github.com/denosaurs/denon>
+
+## Hosting Support
+
+You can Host this on your own server or use Deno Deploy just connect it via
+GitHub - Link the Project Repo, and Branch to deploy Next, Choose the deploy
+option to automatic and Link the `server.ts` file to Start the Server Finally,
+Click the **Link** Button to Connect the repo for Continous auto deploy
+
+- Deno Deploy - <https://deno.com/deploy>
 
 ## Methods Used
 
@@ -49,7 +59,7 @@ deno task start
 
 ## Todo
 
-- [ ] Random User Agent
+- [x] Random User Agent
 - [ ] API Caching
 
 ## For More about Live Score API
