@@ -53,11 +53,14 @@ deno task start
 You can Host this on your own server or use Deno Deploy just connect it via
 GitHub 👇
 
-- Link your Project Repo on Deno Deploy, and `main` Branch to deploy
+- Fork this Project on your Github Repo
+- Link your Forked Project Repo on Deno Deploy, and `main` Branch to deploy
 - Next, Choose the deploy option to automatic and Link the `server.ts` file to
   Start the API Server
 - Finally, Click the **Link** Button to Connect the repo for Continous auto
   deploy
+
+![Deno Deploy](./images/deno-deploy.png)
 
 **Note** : `server.ts` is the Main file to Start API server if you are Hosting
 this on your Server don't Forget to install deno and denon (For Local Testing)
