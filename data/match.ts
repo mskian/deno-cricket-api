@@ -34,8 +34,7 @@ type scoreData = {
   commentary: string;
 };
 
-// deno-lint-ignore no-explicit-any
-export async function dailyMatch(matchId: any) {
+export async function dailyMatch(matchId: number) {
   return await fetch(
     `https://m.cricbuzz.com/live-cricket-scores/${matchId}/`,
     {

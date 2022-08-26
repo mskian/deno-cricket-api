@@ -46,7 +46,14 @@ deno task start
 
 - Live Match - `http://localhost:3000/live`
 - Get Match Score by ID - `http://localhost:3000/match/<MatchID>`
+
+### Configuration
+
 - Update live Match URL in `/data/config.json`
+- Update API Rate limits - `/lib/router.ts`
+- Update CORS Headers to allow Specific websites to access the API -
+  `/lib/router.ts`
+- change the Port No on `server.ts` file
 
 ## Hosting Support and Setup 📦
 
@@ -78,9 +85,6 @@ deno run --allow-net --allow-read server.ts
   <https://github.com/mskian/deno-cricket-api/releases> or use git to clone the
   Project repo on your Server
 - Create Systemd.service file to run the app forever
-- You can change the Port No on `server.ts` file
-- Update CORS Headers to allow Specific websites to access the API -
-  `/lib/router.ts`
 - Use Nginx reverse proxy for DENO api server
 
 > self Host this API Service for 100% Uptime ⬆

@@ -31,7 +31,7 @@ const getScore = async ({ response }: { response: any }) => {
 
 const matchScore = async (
   // deno-lint-ignore no-explicit-any
-  { params, response }: { params: { id: any }; response: any },
+  { params, response }: { params: { id: number }; response: any },
 ) => {
   const currentMatch = params.id;
   const ms = Date.now();
