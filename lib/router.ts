@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak@v11.0.0/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 import { RateLimiter } from "https://deno.land/x/oak_rate_limit@0.1.0-rc2/mod.ts";
 import { ErrorHandle, getScore, homePage, matchScore } from "./controller.ts";
@@ -12,10 +12,10 @@ const allowedOrigins = [
   "https://sanweb.info/",
 ];
 
-function rateLimit() {
+function rateLimit(RateAttempt: number) {
   return RateLimiter({
     windowMs: 1 * 60 * 1000,
-    max: 40,
+    max: RateAttempt,
     headers: true,
     message: "Too many requests, please try again later.",
     statusCode: 429,
@@ -29,9 +29,9 @@ function CorsHeader() {
   });
 }
 
-router.get("/", CorsHeader(), rateLimit(), homePage)
-  .get("/live", CorsHeader(), rateLimit(), getScore)
-  .get("/match/:id", CorsHeader(), rateLimit(), matchScore)
+router.get("/", CorsHeader(), rateLimit(50), homePage)
+  .get("/live", CorsHeader(), rateLimit(43), getScore)
+  .get("/match/:id", CorsHeader(), rateLimit(41), matchScore)
   .get("/(.*)", CorsHeader(), ErrorHandle);
 
 const app = new Application();

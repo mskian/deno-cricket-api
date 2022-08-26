@@ -1,7 +1,7 @@
 import {
   Application,
   isHttpError,
-} from "https://deno.land/x/oak@v11.0.0/mod.ts";
+} from "https://deno.land/x/oak@v11.1.0/mod.ts";
 import router from "./lib/router.ts";
 import { errorData } from "./data/error.ts";
 
