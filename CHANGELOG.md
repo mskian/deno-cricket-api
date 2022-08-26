@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.2] - 2022-08-26
 
 - Update Dependencies
+- Replace `any` to `number` in Get Live Match Data via ID
 
 ## [0.1.1] - 2022-08-23
 
