@@ -50,7 +50,7 @@ deno task start
 ### Configuration
 
 - Update live Match URL in `/data/config.json`
-- Update API Rate limits - `/lib/router.ts`
+- Update API Rate limits - `/server.ts`
 - Update CORS Headers to allow Specific websites to access the API -
   `/lib/router.ts`
 - change the Port No on `server.ts` file
