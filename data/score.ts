@@ -82,7 +82,7 @@ export async function livescore() {
       const lastwicket = $("span[style='color:#333']").eq(1).text();
       const runrate = $("span[class='crr']").eq(0).text();
       const commentary = $("p[class='commtext']").text();
-      const livescore = ({
+      const livescore = {
         title: title || "Data Not Found",
         update: update || "Data Not Found",
         current: currentscore || "Data Not Found",
@@ -113,7 +113,7 @@ export async function livescore() {
         lastwicket: lastwicket || "Data Not Found",
         runrate: runrate || "Data Not Found",
         commentary: commentary || "Data Not Found",
-      });
+      };
       const score: scoreData = livescore;
       return score;
     }).catch((error) => {
