@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak@v12.1.0/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak@v12.5.0/mod.ts";
 import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 import { ErrorHandle, getScore, homePage, matchScore } from "./controller.ts";
 
@@ -8,6 +8,7 @@ const allowedOrigins = [
   "http://localhost:8080",
   "https://localhost:3000",
   "https://score.sanweb.info",
+  "https://score.mskian.com",
   "https://sanweb.info/",
 ];
 

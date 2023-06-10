@@ -1,7 +1,7 @@
 import {
   Application,
   isHttpError,
-} from "https://deno.land/x/oak@v12.1.0/mod.ts";
+} from "https://deno.land/x/oak@v12.5.0/mod.ts";
 import router from "./lib/router.ts";
 import { errorData } from "./data/error.ts";
 import { RateLimiter } from "https://deno.land/x/oak_rate_limit@v0.1.1/mod.ts";
